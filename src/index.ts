@@ -144,8 +144,8 @@ export class AlertService {
 }
 
 
-/** Add this to your Angular2 module providers */
+/** Add this to your Angular2 module providers. It implements the `ClassProvider` interface */
 export const AlertServiceProviderNg2 = {
-	provider: AlertService,
-	class: AlertService,
+	provide: AlertService,
+	useClass: AlertService,
 };
