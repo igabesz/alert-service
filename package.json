@@ -1,0 +1,26 @@
+{
+  "name": "alert-service",
+  "version": "1.0.0",
+  "description": "SweetAlert2 wrapper and conveniency lib",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:igabesz/alert-service.git"
+  },
+  "scripts": {
+    "build": "tsc -p src",
+    "version": "npm run build"
+  },
+  "keywords": [
+    "sweetalert",
+    "sweetalert2",
+    "angular"
+  ],
+  "author": "Gabor Imre",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.merge": "^4.6.0",
+    "sweetalert2": "^6.6.4"
+  }
+}
