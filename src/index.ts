@@ -43,7 +43,7 @@ export class AlertService {
 	async successPopup(text: string, options?: SweetAlertOptions): Promise<void>;
 	async successPopup(title: string, text: string, options?: SweetAlertOptions): Promise<void>;
 	async successPopup(p1: string | SweetAlertOptions, p2?: string | SweetAlertOptions, p3?: SweetAlertOptions): Promise<void> {
-		return new Promise<void>((resolve) => {
+		await new Promise<void>((resolve) => {
 			let options = this.processParams({
 				title: AlertService.Texts.successTitle,
 				type: 'success',
@@ -67,7 +67,7 @@ export class AlertService {
 			}, p1, p2, p3);
 			swal(options)
 			.then(resolve)
-			.catch(reject);
+			.catch(err => resolve(false));
 		});
 	}
 
@@ -75,7 +75,7 @@ export class AlertService {
 	async errorPopup(text: string, options?: SweetAlertOptions): Promise<void>;
 	async errorPopup(title: string, text: string, options?: SweetAlertOptions): Promise<void>;
 	async errorPopup(p1: string | SweetAlertOptions, p2?: string | SweetAlertOptions, p3?: SweetAlertOptions): Promise<void> {
-		return new Promise<void>((resolve) => {
+		await new Promise<void>((resolve) => {
 			let options = this.processParams({
 				title: AlertService.Texts.errorTitle,
 				type: 'error',
